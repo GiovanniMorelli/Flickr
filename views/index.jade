@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  div(layout='column' )
+    md-toolbar(data-current-skin="blue")
+      div(class="md-toolbar-tools"  )
+        md-button(ng-click="openAsideLeft();setIconLeft()"   class="md-fab md-primary")
+          ng-md-icon( icon="{{icon}}"  ng-controller="iconAsideLeft" ng-attr-style="fill: {{fill}}" size="{{size}}")
+        span Flickr
+        span(flex)
+        md-button( ng-click="openAsideRight();setIconRight()" class="md-fab md-primary")
+          ng-md-icon( icon="{{icon}}" ng-attr-style="fill: {{fill}}"   ng-controller="iconAsideRight" size="{{size}}")
+    div
+      section(id="sectionSideBarLeft" flex)
+        aside(class="aside_left")
+          md-content( layout-padding)
+            md-input-container(class="md-block" )
+              label(for="testAsideLeft")  Test input
+              input(type="text" id="testAsideLeft" ng-model="data" )
+      section(id="sectionSideBarRight" flex)
+        aside(class="aside_right")
+          md-content( layout-padding)
+            md-input-container(class="md-block" )
+              label(for="testAsideRight")  Test input
+              input(type="text" id="testAsideRight" ng-model="data" )
+      div(ng-view )
+      md-content(id="contentFlickr" )
+        div.scroll-top-wrapper
+          span.scroll-top-inner
+            i.fa.fa-2x.fa-arrow-circle-up
