@@ -7,7 +7,7 @@ angular.module('mdLightboxDirective',[])
 
 		    elem.on('click',function(){		
 		    	var image = attrs.src;
-		    	var title = attrs.title;
+		    	var title = attrs.mdLightboxTitle;
 				title = title .substring(0, 120)+"...";
 		    	showLightboxModal(image, title);
 				

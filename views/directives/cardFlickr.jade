@@ -6,7 +6,7 @@ md-content(main-content="flickr"  layout-xs="column" layout="row")
                     span( class="md-headline") {{title}}
             md-card-content( layout="row")
                 div( class="md-media-xl card-media")
-                    img( md-Lightbox title="{{title}}" image-card ng-src='https://farm{{farmid}}.staticflickr.com/{{serverid}}/{{id}}_{{secret}}.jpg')
+                    img( md-Lightbox md-lightbox-title="{{title}}" image-card ng-src='https://farm{{farmid}}.staticflickr.com/{{serverid}}/{{id}}_{{secret}}.jpg')
                 md-card-actions
                     md-button( class="md-fab md-primary" aria-label="Favorite")
                         ng-md-icon( icon="favorite" ng-attr-style="fill: black"    size="48")
